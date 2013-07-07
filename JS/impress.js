@@ -87,7 +87,8 @@
     
     // `byId` returns element with given `id` - you probably have guessed that ;)
     var byId = function ( id ) {
-        return document.getElementById(id);
+        //return document.getElementById(id);
+        return window.frames['output'].document.getElementById(id);
     };
     
     // `$` returns first element for given CSS `selector` in the `context` of
@@ -166,7 +167,7 @@
     
     // CHECK SUPPORT
     var body = document.body;
-    
+
     var ua = navigator.userAgent.toLowerCase();
     var impressSupported = 
                           // browser should support CSS 3D transtorms 
